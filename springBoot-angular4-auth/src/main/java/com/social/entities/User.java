@@ -53,12 +53,29 @@ public  class User implements UserDetails{
 	 * Description of the property full name.
 	 */
     private String fullName;
+    
+  
+    
 
-    public User(){
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public User(){
     	
     }
     
-    public User(String username,String password,String fullName){
+    public User(String username, String password, String role, String fullName
+			 ) {
+		
+		this.username = username;
+		this.password = password;
+		this.role = role;
+		this.fullName = fullName;
+		
+	}
+
+	public User(String username,String password,String fullName){
     	this.username=username;
     	this.password= password;
     	this.fullName=fullName;
